@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D56072CC2852550D00141A88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56072C92852550D00141A88 /* Main.storyboard */; };
+		D56072CD2852550D00141A88 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = D56072CB2852550D00141A88 /* View.xib */; };
 		D5B61AC12832A904007C5C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B61AC02832A904007C5C45 /* AppDelegate.swift */; };
 		D5B61AC32832A905007C5C45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B61AC22832A905007C5C45 /* SceneDelegate.swift */; };
 		D5B61AC52832A905007C5C45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B61AC42832A905007C5C45 /* ViewController.swift */; };
-		D5B61AC82832A905007C5C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B61AC62832A905007C5C45 /* Main.storyboard */; };
 		D5B61ACA2832A909007C5C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B61AC92832A909007C5C45 /* Assets.xcassets */; };
 		D5B61ACD2832A909007C5C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B61ACB2832A909007C5C45 /* LaunchScreen.storyboard */; };
 		D5B61AD82832A909007C5C45 /* InstagridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B61AD72832A909007C5C45 /* InstagridTests.swift */; };
@@ -36,14 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D56072CA2852550D00141A88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D56072CB2852550D00141A88 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		D5B61ABD2832A904007C5C45 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B61AC02832A904007C5C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B61AC22832A905007C5C45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5B61AC42832A905007C5C45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D5B61AC72832A905007C5C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5B61AC92832A909007C5C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5B61ACC2832A909007C5C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D5B61ACE2832A909007C5C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5B61ACE2832A909007C5C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Instagrid/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		D5B61AD32832A909007C5C45 /* InstagridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B61AD72832A909007C5C45 /* InstagridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridTests.swift; sourceTree = "<group>"; };
 		D5B61ADD2832A909007C5C45 /* InstagridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D56072C82852550D00141A88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D56072C92852550D00141A88 /* Main.storyboard */,
+				D56072CB2852550D00141A88 /* View.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D5B61AB42832A904007C5C45 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +110,10 @@
 		D5B61ABF2832A904007C5C45 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				D5B61AC02832A904007C5C45 /* AppDelegate.swift */,
-				D5B61AC22832A905007C5C45 /* SceneDelegate.swift */,
-				D5B61AC42832A905007C5C45 /* ViewController.swift */,
-				D5B61AC62832A905007C5C45 /* Main.storyboard */,
-				D5B61AC92832A909007C5C45 /* Assets.xcassets */,
-				D5B61ACB2832A909007C5C45 /* LaunchScreen.storyboard */,
-				D5B61ACE2832A909007C5C45 /* Info.plist */,
+				D5B61B312832CD69007C5C45 /* Controller */,
+				D5B61B2E2832CD42007C5C45 /* Model */,
+				D5B61B322832CDC8007C5C45 /* Supporting Files */,
+				D56072C82852550D00141A88 /* View */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -125,6 +133,33 @@
 				D5B61AE32832A909007C5C45 /* InstagridUITestsLaunchTests.swift */,
 			);
 			path = InstagridUITests;
+			sourceTree = "<group>";
+		};
+		D5B61B2E2832CD42007C5C45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5B61B312832CD69007C5C45 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5B61AC42832A905007C5C45 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5B61B322832CDC8007C5C45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5B61ACE2832A909007C5C45 /* Info.plist */,
+				D5B61AC02832A904007C5C45 /* AppDelegate.swift */,
+				D5B61AC22832A905007C5C45 /* SceneDelegate.swift */,
+				D5B61ACB2832A909007C5C45 /* LaunchScreen.storyboard */,
+				D5B61AC92832A909007C5C45 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56072CD2852550D00141A88 /* View.xib in Resources */,
+				D56072CC2852550D00141A88 /* Main.storyboard in Resources */,
 				D5B61ACD2832A909007C5C45 /* LaunchScreen.storyboard in Resources */,
 				D5B61ACA2832A909007C5C45 /* Assets.xcassets in Resources */,
-				D5B61AC82832A905007C5C45 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,10 +333,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D5B61AC62832A905007C5C45 /* Main.storyboard */ = {
+		D56072C92852550D00141A88 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D5B61AC72832A905007C5C45 /* Base */,
+				D56072CA2852550D00141A88 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -437,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 29N7A94V9K;
@@ -445,6 +482,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,7 +494,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 29N7A94V9K;
@@ -473,6 +512,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

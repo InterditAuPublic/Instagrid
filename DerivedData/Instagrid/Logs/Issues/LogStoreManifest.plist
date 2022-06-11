@@ -5,7 +5,36 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>DA6D30F9-A701-4669-8B0E-FB5182726281</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>DA6D30F9-A701-4669-8B0E-FB5182726281.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>Instagrid-atrkimckxgfwyzbpptavbmxmcebj</string>
+			<key>timeStartedRecording</key>
+			<real>676559596.40371299</real>
+			<key>timeStoppedRecording</key>
+			<real>676559598.84258699</real>
+			<key>title</key>
+			<string>Build target Instagrid</string>
+			<key>uniqueIdentifier</key>
+			<string>DA6D30F9-A701-4669-8B0E-FB5182726281</string>
+		</dict>
+	</dict>
 	<key>preserveOldLogs</key>
 	<true/>
 </dict>

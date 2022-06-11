@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "a4a403bdde4144706e008de51b2a7e16294521111299e750d5f9535b87782b48"
+build_start_time: [1654866785, 799870014]
+build_end_time: [1654866791, 87902069]
+inputs:
+  "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/Instagrid/Controller/ViewController.swift": [1654858265, 753743886]
+  "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/Instagrid/Supporting Files/AppDelegate.swift": [1654185835, 346378803]
+  "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/Instagrid/Supporting Files/SceneDelegate.swift": [1652715909, 3939151]
