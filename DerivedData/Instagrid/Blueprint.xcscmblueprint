@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2523A584ABA28ADEBFB1CECADE00DB8A84638A68",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2523A584ABA28ADEBFB1CECADE00DB8A84638A68" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3764EE95-07E6-479D-85F2-4E0985B503D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2523A584ABA28ADEBFB1CECADE00DB8A84638A68" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Instagrid",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Instagrid.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git@github.com:InterditAuPublic\/Instagrid.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2523A584ABA28ADEBFB1CECADE00DB8A84638A68"
+    }
+  ]
+}

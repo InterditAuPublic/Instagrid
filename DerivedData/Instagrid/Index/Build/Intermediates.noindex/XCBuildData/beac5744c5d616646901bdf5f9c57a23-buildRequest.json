@@ -1,0 +1,62 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "25aaf6d7718ead4d2f2bba3c821bd18ba2350a87f46589cabebf132729d7c46d"
+    }
+  ],
+  "containerPath" : "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/Instagrid.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphoneos",
+      "sdk" : "iphoneos15.5",
+      "sdkVariant" : "iphoneos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64v8",
+        "arm64",
+        "armv8"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/DerivedData/Instagrid/Index/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/DerivedData/Instagrid/Index/Build/Products",
+      "derivedDataPath" : "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/DerivedData/Instagrid/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/DerivedData/Instagrid/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/DerivedData/Instagrid/Index/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "INDEX_ARENA_INFO_REGULAR_BUILD_PRODUCTS_DIR" : "/Users/devmac/Documents/Perso/OpenClassRoom/Projets/Instagrid/Instagrid/DerivedData/Instagrid/Build/Products",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

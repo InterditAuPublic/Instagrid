@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>0B4F5E69-CE10-4555-BB47-9D0EB497AC2F</key>
+		<key>6F2DAABF-74F7-41A7-8700-087F6EB9EFD8</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>0B4F5E69-CE10-4555-BB47-9D0EB497AC2F.xcactivitylog</string>
+			<string>6F2DAABF-74F7-41A7-8700-087F6EB9EFD8.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,217 +32,13 @@
 			<key>signature</key>
 			<string>Run Instagrid</string>
 			<key>timeStartedRecording</key>
-			<real>676297455.62471104</real>
+			<real>677074685.571962</real>
 			<key>timeStoppedRecording</key>
-			<real>676297486.31481397</real>
+			<real>677074745.77523601</real>
 			<key>title</key>
 			<string>Run Instagrid</string>
 			<key>uniqueIdentifier</key>
-			<string>0B4F5E69-CE10-4555-BB47-9D0EB497AC2F</string>
-		</dict>
-		<key>0C965941-4395-4AB8-A964-B87C59C2B014</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>0C965941-4395-4AB8-A964-B87C59C2B014.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Instagrid project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Instagrid</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Instagrid</string>
-			<key>timeStartedRecording</key>
-			<real>676485904.29702604</real>
-			<key>timeStoppedRecording</key>
-			<real>676486084.28428996</real>
-			<key>title</key>
-			<string>Run Instagrid</string>
-			<key>uniqueIdentifier</key>
-			<string>0C965941-4395-4AB8-A964-B87C59C2B014</string>
-		</dict>
-		<key>23640C06-2435-4E17-BBB7-DB3E1B73FCDC</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>23640C06-2435-4E17-BBB7-DB3E1B73FCDC.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Instagrid project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Instagrid</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Instagrid</string>
-			<key>timeStartedRecording</key>
-			<real>676484142.84068596</real>
-			<key>timeStoppedRecording</key>
-			<real>676484188.979321</real>
-			<key>title</key>
-			<string>Run Instagrid</string>
-			<key>uniqueIdentifier</key>
-			<string>23640C06-2435-4E17-BBB7-DB3E1B73FCDC</string>
-		</dict>
-		<key>392E05E5-A333-477A-A551-90FA2DE4B772</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>392E05E5-A333-477A-A551-90FA2DE4B772.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Instagrid project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Instagrid</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Instagrid</string>
-			<key>timeStartedRecording</key>
-			<real>676551226.00810301</real>
-			<key>timeStoppedRecording</key>
-			<real>676559342.31276</real>
-			<key>title</key>
-			<string>Run Instagrid</string>
-			<key>uniqueIdentifier</key>
-			<string>392E05E5-A333-477A-A551-90FA2DE4B772</string>
-		</dict>
-		<key>50316B6A-C727-426C-BB2F-CF8A20A8D02B</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>50316B6A-C727-426C-BB2F-CF8A20A8D02B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Instagrid project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Instagrid</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Instagrid</string>
-			<key>timeStartedRecording</key>
-			<real>676486089.89833903</real>
-			<key>timeStoppedRecording</key>
-			<real>676486106.385589</real>
-			<key>title</key>
-			<string>Run Instagrid</string>
-			<key>uniqueIdentifier</key>
-			<string>50316B6A-C727-426C-BB2F-CF8A20A8D02B</string>
-		</dict>
-		<key>B0D699EA-74AB-4062-B638-CA1AB1D205DF</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>B0D699EA-74AB-4062-B638-CA1AB1D205DF.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Instagrid project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Instagrid</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Instagrid</string>
-			<key>timeStartedRecording</key>
-			<real>676548569.37742603</real>
-			<key>timeStoppedRecording</key>
-			<real>676548703.02001595</real>
-			<key>title</key>
-			<string>Run Instagrid</string>
-			<key>uniqueIdentifier</key>
-			<string>B0D699EA-74AB-4062-B638-CA1AB1D205DF</string>
-		</dict>
-		<key>D35C74F1-01D7-4435-80CF-B80C14947B6A</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>D35C74F1-01D7-4435-80CF-B80C14947B6A.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>Instagrid project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>Instagrid</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run Instagrid</string>
-			<key>timeStartedRecording</key>
-			<real>676549305.27118599</real>
-			<key>timeStoppedRecording</key>
-			<real>676549437.20034897</real>
-			<key>title</key>
-			<string>Run Instagrid</string>
-			<key>uniqueIdentifier</key>
-			<string>D35C74F1-01D7-4435-80CF-B80C14947B6A</string>
+			<string>6F2DAABF-74F7-41A7-8700-087F6EB9EFD8</string>
 		</dict>
 	</dict>
 </dict>
