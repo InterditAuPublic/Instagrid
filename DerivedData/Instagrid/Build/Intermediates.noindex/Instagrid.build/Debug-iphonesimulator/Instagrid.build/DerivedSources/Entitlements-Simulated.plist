@@ -4,9 +4,5 @@
 <dict>
 	<key>application-identifier</key>
 	<string>29N7A94V9K.melvinpoutrel.Instagrid</string>
-	<key>keychain-access-groups</key>
-	<array>
-		<string>29N7A94V9K.melvinpoutrel.Instagrid</string>
-	</array>
 </dict>
 </plist>

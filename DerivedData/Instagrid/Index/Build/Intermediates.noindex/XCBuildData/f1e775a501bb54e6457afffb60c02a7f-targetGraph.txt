@@ -1,3 +1,0 @@
-Target dependency graph (2 targets)
-Instagrid in Instagrid, no dependencies
-Instagrid in Instagrid, no dependencies

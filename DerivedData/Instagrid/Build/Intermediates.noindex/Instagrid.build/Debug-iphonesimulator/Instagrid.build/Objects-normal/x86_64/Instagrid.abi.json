@@ -5,24 +5,13 @@
   "children": [
     {
       "kind": "Import",
-      "name": "SwiftOnoneSupport",
-      "printedName": "SwiftOnoneSupport",
-      "declKind": "Import",
-      "moduleName": "Instagrid"
-    },
-    {
-      "kind": "Import",
       "name": "UIKit",
       "printedName": "UIKit",
       "declKind": "Import",
-      "moduleName": "Instagrid"
-    },
-    {
-      "kind": "Import",
-      "name": "_Concurrency",
-      "printedName": "_Concurrency",
-      "declKind": "Import",
-      "moduleName": "Instagrid"
+      "moduleName": "Instagrid",
+      "declAttributes": [
+        "RawDocComment"
+      ]
     },
     {
       "kind": "TypeDecl",
@@ -48,9 +37,9 @@
           "declAttributes": [
             "HasInitialValue",
             "Custom",
-            "IBOutlet",
-            "ReferenceOwnership",
             "HasStorage",
+            "ReferenceOwnership",
+            "IBOutlet",
             "ObjC"
           ],
           "fixedbinaryorder": 0,
@@ -164,9 +153,9 @@
           "declAttributes": [
             "HasInitialValue",
             "Custom",
-            "IBOutlet",
-            "ReferenceOwnership",
             "HasStorage",
+            "ReferenceOwnership",
+            "IBOutlet",
             "ObjC"
           ],
           "fixedbinaryorder": 1,
@@ -280,9 +269,9 @@
           "declAttributes": [
             "HasInitialValue",
             "Custom",
-            "IBOutlet",
-            "ReferenceOwnership",
             "HasStorage",
+            "ReferenceOwnership",
+            "IBOutlet",
             "ObjC"
           ],
           "fixedbinaryorder": 2,
@@ -657,24 +646,13 @@
     },
     {
       "kind": "Import",
-      "name": "SwiftOnoneSupport",
-      "printedName": "SwiftOnoneSupport",
-      "declKind": "Import",
-      "moduleName": "Instagrid"
-    },
-    {
-      "kind": "Import",
       "name": "UIKit",
       "printedName": "UIKit",
       "declKind": "Import",
-      "moduleName": "Instagrid"
-    },
-    {
-      "kind": "Import",
-      "name": "_Concurrency",
-      "printedName": "_Concurrency",
-      "declKind": "Import",
-      "moduleName": "Instagrid"
+      "moduleName": "Instagrid",
+      "declAttributes": [
+        "RawDocComment"
+      ]
     },
     {
       "kind": "TypeDecl",
@@ -864,6 +842,28 @@
           "funcSelfKind": "NonMutating"
         },
         {
+          "kind": "Function",
+          "name": "$main",
+          "printedName": "$main()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:9Instagrid11AppDelegateC5$mainyyFZ",
+          "mangledName": "$s9Instagrid11AppDelegateC5$mainyyFZ",
+          "moduleName": "Instagrid",
+          "static": true,
+          "implicit": true,
+          "declAttributes": [
+            "Final"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
           "kind": "Constructor",
           "name": "init",
           "printedName": "init()",
@@ -888,28 +888,6 @@
             "Override"
           ],
           "init_kind": "Designated"
-        },
-        {
-          "kind": "Function",
-          "name": "$main",
-          "printedName": "$main()",
-          "children": [
-            {
-              "kind": "TypeNominal",
-              "name": "Void",
-              "printedName": "()"
-            }
-          ],
-          "declKind": "Func",
-          "usr": "s:9Instagrid11AppDelegateC5$mainyyFZ",
-          "mangledName": "$s9Instagrid11AppDelegateC5$mainyyFZ",
-          "moduleName": "Instagrid",
-          "static": true,
-          "implicit": true,
-          "declAttributes": [
-            "Final"
-          ],
-          "funcSelfKind": "NonMutating"
         }
       ],
       "declKind": "Class",
@@ -982,24 +960,13 @@
     },
     {
       "kind": "Import",
-      "name": "SwiftOnoneSupport",
-      "printedName": "SwiftOnoneSupport",
-      "declKind": "Import",
-      "moduleName": "Instagrid"
-    },
-    {
-      "kind": "Import",
       "name": "UIKit",
       "printedName": "UIKit",
       "declKind": "Import",
-      "moduleName": "Instagrid"
-    },
-    {
-      "kind": "Import",
-      "name": "_Concurrency",
-      "printedName": "_Concurrency",
-      "declKind": "Import",
-      "moduleName": "Instagrid"
+      "moduleName": "Instagrid",
+      "declAttributes": [
+        "RawDocComment"
+      ]
     },
     {
       "kind": "TypeDecl",

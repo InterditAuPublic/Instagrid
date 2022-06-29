@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>6F2DAABF-74F7-41A7-8700-087F6EB9EFD8</key>
+		<key>B61454AA-4A65-4772-89D7-FDB35071E83C</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>6F2DAABF-74F7-41A7-8700-087F6EB9EFD8.xcactivitylog</string>
+			<string>B61454AA-4A65-4772-89D7-FDB35071E83C.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,13 +32,13 @@
 			<key>signature</key>
 			<string>Run Instagrid</string>
 			<key>timeStartedRecording</key>
-			<real>677074685.571962</real>
+			<real>678188073.58911204</real>
 			<key>timeStoppedRecording</key>
-			<real>677074745.77523601</real>
+			<real>678188104.80420399</real>
 			<key>title</key>
 			<string>Run Instagrid</string>
 			<key>uniqueIdentifier</key>
-			<string>6F2DAABF-74F7-41A7-8700-087F6EB9EFD8</string>
+			<string>B61454AA-4A65-4772-89D7-FDB35071E83C</string>
 		</dict>
 	</dict>
 </dict>

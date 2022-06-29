@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		O+sorK9sLxnzxNH1mGf25qPKnOk=
+		Pw6o1QohxYbJ78nDNRCRv5Ju0hA=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -24,25 +24,41 @@
 		<data>
 		U0x8EM0781fCPb62BbZIXKeDlZ4=
 		</data>
-		<key>Base.lproj/Main.storyboardc/BIS-wV-PhO-view-yMs-Jv-OkO.nib</key>
-		<data>
-		Pk3hn6q7yrQ+cOTNO87ABmWj2nc=
-		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		VhnMCcCPgNBDYh/XUj90Fl02MOA=
+		408+ef4aeuV85IQ4vWS3zUSAGKE=
+		</data>
+		<key>Base.lproj/Main.storyboardc/ViV-X0-GtF-view-J4a-Ud-rWN.nib</key>
+		<data>
+		ImJr26/q90J0jFDN8rPgy0kwQUU=
+		</data>
+		<key>Base.lproj/Main.storyboardc/jeD-mi-fxJ-view-vOk-jv-PfR.nib</key>
+		<data>
+		4CqNqAzfMh11+3WvrV1dCmchMDo=
 		</data>
 		<key>Base.lproj/Main.storyboardc/mainController.nib</key>
 		<data>
-		2e41x9OaGm6TFfxNNjP4IKSaV+I=
+		7WqlDrW3Re3oi8IC04IhskcUZM4=
+		</data>
+		<key>Base.lproj/Main.storyboardc/tu.nib</key>
+		<data>
+		0FFiM8iWaviRbyuDqHmTiTroqKc=
+		</data>
+		<key>Delm-Medium.otf</key>
+		<data>
+		pJcpCwKjEuE4S3hEsn7MDvgb48w=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+pxoqmtI8/MI77DUl5Bkke0ra+0=
+		6gxVngMV1c5h6M9rVcCVelMakKY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>ThirstySoftRegular.otf</key>
+		<data>
+		qpXXxN1dqWaFWxdBIp3dtdjb2zU=
 		</data>
 		<key>View.nib</key>
 		<data>
@@ -62,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ifoi38QXCD+fJZ5DVHyk0ulVYEXLE/xMppj6DrZcIKY=
+			r8eFTwqhk3Nz4aSd/3wdcNT+pFaIjz/XVy+e/kcEHWc=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -86,25 +102,53 @@
 			cWq7q+iQcmpSoaFGecnyPdKFEPFwRD3slgUmxFADkVs=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/BIS-wV-PhO-view-yMs-Jv-OkO.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1x7x7cgIL5uvEeREDyOpEA7bCCMTxCZ4R3PlnT1UzRk=
-			</data>
-		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m4na2Flr1yLm+rscu4ymYKjOuM0hcqwl1yk2lFg7290=
+			m4wS+g/3HphgKibXcLyaWBnUnwWyh0IWbRpct4mZtoc=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/ViV-X0-GtF-view-J4a-Ud-rWN.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kn3zEHzyBr8cOrOXGLhiY48NzbCLZAICJlZPaeBvp5k=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/jeD-mi-fxJ-view-vOk-jv-PfR.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cOlunM7vMrECi5ffBRyzeFmkD9SudbPvjBn+Nir3D9E=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/mainController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h4qdvBesDNjJ//9TK7qAknRO0zbVgHUl0+n4D6m4soQ=
+			B3VGdxZNb+t3KQUiUZlQfty38vCzepbCdZN4UUCeX0Y=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/tu.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MPV7+thaXXUmkwdAvvJTlZ5MhhC+yfxkay5fJMaoJvw=
+			</data>
+		</dict>
+		<key>Delm-Medium.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ez817O29VeJXGJVaeIOb1QOUXDFOL95P+Yu6lx3Vsyc=
+			</data>
+		</dict>
+		<key>ThirstySoftRegular.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			j5HT63yCpX9BIqprbZz3CBKMoJh4myqr7MiZIZl8UZ8=
 			</data>
 		</dict>
 		<key>View.nib</key>
