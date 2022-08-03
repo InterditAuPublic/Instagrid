@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ViV-X0-GtF">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,95 +23,149 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ahM-zt-FnS" userLabel="Screen Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ahM-zt-FnS" userLabel="Screen Stack View">
                                 <rect key="frame" x="40" y="64" width="334" height="778"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYZ-pz-Cnq">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="guC-Tt-ddW"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="TnO-Km-eTS">
-                                        <rect key="frame" x="0.0" y="167" width="334" height="611"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TnO-Km-eTS">
+                                        <rect key="frame" x="0.0" y="167.33333333333334" width="334" height="387.33333333333326"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gMM-f7-JCk" userLabel="Swipe Layout Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="389.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bhg-Nw-UNp" userLabel="Swipe Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="45.333333333333336"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bhg-Nw-UNp" userLabel="Swipe Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="45.5"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ArrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="DOZ-0n-jFM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="15"/>
-                                                                <gestureRecognizers/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="15" id="4u0-7Q-qmP"/>
-                                                                </constraints>
-                                                                <variation key="heightClass=compact-widthClass=regular" image="ArrowLeft"/>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5T-pD-oxV">
-                                                                <rect key="frame" x="0.0" y="25" width="334" height="20.5"/>
-                                                                <attributedString key="attributedText">
-                                                                    <fragment content="Swipe Up To Share">
-                                                                        <attributes>
-                                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <font key="NSFont" metaFont="system" size="17"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                </attributedString>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ArrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="DOZ-0n-jFM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="15"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="4u0-7Q-qmP"/>
+                                                        </constraints>
+                                                        <variation key="heightClass=compact-widthClass=compact" image="ArrowLeft"/>
+                                                        <variation key="heightClass=compact-widthClass=regular" image="ArrowLeft"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5T-pD-oxV">
+                                                        <rect key="frame" x="0.0" y="24.999999999999972" width="334" height="20.333333333333329"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Swipe Up To Share">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Swipe Left To Share">
+                                                                    <attributes>
+                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <font key="NSFont" metaFont="system" size="17"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </variation>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Swipe Left To Share">
+                                                                    <attributes>
+                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gMM-f7-JCk" userLabel="Swipe Layout Stack View">
+                                                <rect key="frame" x="0.0" y="53.333333333333343" width="334" height="334"/>
+                                                <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWI-Lt-BhQ" userLabel="Layout View" customClass="LayoutView" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="55.5" width="334" height="334"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="334"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OiU-0N-pXj" userLabel="Vertical Stack View">
                                                                 <rect key="frame" x="15" y="15" width="304" height="304"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hbb-0Q-3w7" userLabel="TopStackView">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="144.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hbb-0Q-3w7" userLabel="TopStackView">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="144.33333333333334"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ap-nF-44I" userLabel="Top Left Button Picker">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="144.5" height="144.5"/>
+                                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ap-nF-44I" userLabel="Top Left Button Picker">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="144.33333333333334"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <color key="tintColor" systemColor="systemBlueColor"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="Plus"/>
+                                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                                    <color key="tintColor" white="0.38" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </variation>
+                                                                                <variation key="heightClass=compact-widthClass=regular">
+                                                                                    <color key="tintColor" white="0.38" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </variation>
                                                                                 <connections>
-                                                                                    <action selector="DidPressImagePickerButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="qNs-Fj-Dbi"/>
+                                                                                    <action selector="didPressImagePickerButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="w1K-6M-4YN"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3j-sj-WaE" userLabel="Top Right Button Picker">
-                                                                                <rect key="frame" x="159.5" y="0.0" width="144.5" height="144.5"/>
+                                                                                <rect key="frame" x="159.66666666666663" y="0.0" width="144.33333333333337" height="144.33333333333334"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <color key="tintColor" systemColor="systemBlueColor"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="Plus"/>
+                                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                                    <color key="tintColor" white="0.38" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </variation>
+                                                                                <variation key="heightClass=compact-widthClass=regular">
+                                                                                    <color key="tintColor" white="0.38" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </variation>
                                                                                 <connections>
-                                                                                    <action selector="DidPressImagePickerButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="qfW-Oi-fbz"/>
+                                                                                    <action selector="didPressImagePickerButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="FJl-qT-ce1"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vQM-yR-j4A" userLabel="BottomStackView">
-                                                                        <rect key="frame" x="0.0" y="159.5" width="304" height="144.5"/>
+                                                                        <rect key="frame" x="0.0" y="159.33333333333331" width="304" height="144.66666666666669"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-qs-FPz" userLabel="Bottom Left Button Picker">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="144.5" height="144.5"/>
+                                                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-qs-FPz" userLabel="Bottom Left Button Picker">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="144.66666666666666"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <color key="tintColor" systemColor="linkColor"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="Plus"/>
+                                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                                    <color key="tintColor" white="0.38" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </variation>
+                                                                                <variation key="heightClass=compact-widthClass=regular">
+                                                                                    <color key="tintColor" white="0.38" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </variation>
                                                                                 <connections>
-                                                                                    <action selector="DidPressImagePickerButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="wgT-Qv-3vK"/>
+                                                                                    <action selector="didPressImagePickerButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="87l-rv-19Z"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryf-aC-nQn" userLabel="Bottom Right Button Picker">
-                                                                                <rect key="frame" x="159.5" y="0.0" width="144.5" height="144.5"/>
+                                                                                <rect key="frame" x="159.66666666666663" y="0.0" width="144.33333333333337" height="144.66666666666666"/>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <color key="tintColor" systemColor="linkColor"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" image="Plus"/>
+                                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                                    <color key="tintColor" white="0.38" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </variation>
+                                                                                <variation key="heightClass=compact-widthClass=regular">
+                                                                                    <color key="tintColor" white="0.38" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                </variation>
                                                                                 <connections>
-                                                                                    <action selector="DidPressImagePickerButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="jKq-lW-Fyg"/>
+                                                                                    <action selector="didPressImagePickerButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="z1M-2y-etD"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -124,7 +180,6 @@
                                                             <constraint firstItem="OiU-0N-pXj" firstAttribute="leading" secondItem="cWI-Lt-BhQ" secondAttribute="leading" constant="15" id="Ju9-1S-RUf"/>
                                                             <constraint firstAttribute="trailing" secondItem="OiU-0N-pXj" secondAttribute="trailing" constant="15" id="QPz-10-XCJ"/>
                                                             <constraint firstItem="OiU-0N-pXj" firstAttribute="top" secondItem="cWI-Lt-BhQ" secondAttribute="top" constant="15" id="hWk-G5-OMf"/>
-                                                            <constraint firstAttribute="width" secondItem="cWI-Lt-BhQ" secondAttribute="height" multiplier="1:1" id="ltr-EA-wMa"/>
                                                         </constraints>
                                                         <connections>
                                                             <outlet property="BottomRightButtonPicker" destination="ryf-aC-nQn" id="F4a-VT-Rb2"/>
@@ -142,94 +197,58 @@
                                                     <outletCollection property="gestureRecognizers" destination="yGz-yn-TIs" appends="YES" id="Yhr-mt-Dn5"/>
                                                 </connections>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Fbz-z9-Vqa" userLabel="Buttons Stack View">
-                                                <rect key="frame" x="0.0" y="519.5" width="334" height="91.5"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrr-os-L9w" userLabel="Button View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-6S-p83" userLabel="Button1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="Rrt-6S-p83" secondAttribute="height" multiplier="1:1" id="jIO-0P-spJ"/>
-                                                                </constraints>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title="" backgroundImage="Layout1"/>
-                                                                <state key="selected" image="s" backgroundImage="Layout1"/>
-                                                                <connections>
-                                                                    <action selector="DidPressedChangeLayoutButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="7Av-bh-iOJ"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="Rrt-6S-p83" secondAttribute="bottom" id="8Mc-Ol-DbM"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Rrt-6S-p83" secondAttribute="trailing" id="Zun-8X-ErK"/>
-                                                            <constraint firstItem="Rrt-6S-p83" firstAttribute="leading" secondItem="lrr-os-L9w" secondAttribute="leading" id="j0G-1l-xlf"/>
-                                                            <constraint firstItem="Rrt-6S-p83" firstAttribute="top" secondItem="lrr-os-L9w" secondAttribute="top" id="jyh-0i-F6n"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpw-Qq-dYl" userLabel="Button View">
-                                                        <rect key="frame" x="121.5" y="0.0" width="91" height="91.5"/>
-                                                        <subviews>
-                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjh-O5-IUJ" userLabel="Button2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="91" height="91.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="jjh-O5-IUJ" secondAttribute="height" multiplier="1:1" id="2xy-k1-26O"/>
-                                                                </constraints>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title="" backgroundImage="Layout2"/>
-                                                                <state key="selected" image="s" backgroundImage="Layout2"/>
-                                                                <connections>
-                                                                    <action selector="DidPressedChangeLayoutButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="a9K-k1-oUA"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="jjh-O5-IUJ" secondAttribute="trailing" id="23p-J7-Uam"/>
-                                                            <constraint firstAttribute="bottom" secondItem="jjh-O5-IUJ" secondAttribute="bottom" id="AhP-ZL-I1O"/>
-                                                            <constraint firstItem="jjh-O5-IUJ" firstAttribute="leading" secondItem="zpw-Qq-dYl" secondAttribute="leading" id="kSF-XJ-e69"/>
-                                                            <constraint firstItem="jjh-O5-IUJ" firstAttribute="top" secondItem="zpw-Qq-dYl" secondAttribute="top" id="qHe-Gf-5eB"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="C6e-vy-dpR" userLabel="Button View">
-                                                        <rect key="frame" x="242.5" y="0.0" width="91.5" height="91.5"/>
-                                                        <subviews>
-                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBs-qq-OPX" userLabel="Button3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="TBs-qq-OPX" secondAttribute="height" multiplier="1:1" id="wSg-Qj-jbW"/>
-                                                                </constraints>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" backgroundImage="Layout3"/>
-                                                                <state key="selected" image="s" backgroundImage="Layout3"/>
-                                                                <connections>
-                                                                    <action selector="DidPressedChangeLayoutButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="VNY-zA-U3f"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="TBs-qq-OPX" firstAttribute="leading" secondItem="C6e-vy-dpR" secondAttribute="leading" id="G0o-ph-aEc"/>
-                                                            <constraint firstAttribute="trailing" secondItem="TBs-qq-OPX" secondAttribute="trailing" id="GXO-bu-OCb"/>
-                                                            <constraint firstAttribute="bottom" secondItem="TBs-qq-OPX" secondAttribute="bottom" id="mhF-an-mo2"/>
-                                                            <constraint firstItem="TBs-qq-OPX" firstAttribute="top" secondItem="C6e-vy-dpR" secondAttribute="top" id="xyQ-dm-Bhj"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
-                                                <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
-                                            </stackView>
                                         </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                                         <variation key="heightClass=compact-widthClass=regular" axis="horizontal" distribution="fill"/>
+                                        <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Fbz-z9-Vqa" userLabel="Buttons Stack View">
+                                        <rect key="frame" x="0.0" y="686.66666666666663" width="334" height="91.333333333333371"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-6S-p83" userLabel="Button1">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="91.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Rrt-6S-p83" secondAttribute="height" multiplier="1:1" id="jIO-0P-spJ"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" backgroundImage="Layout1"/>
+                                                <state key="selected" image="s" backgroundImage="Layout1"/>
+                                                <connections>
+                                                    <action selector="didPressedChangeLayoutButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="Cjt-VP-17c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjh-O5-IUJ" userLabel="Button2">
+                                                <rect key="frame" x="121.33333333333334" y="0.0" width="91.333333333333343" height="91.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="jjh-O5-IUJ" secondAttribute="height" multiplier="1:1" id="2xy-k1-26O"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" backgroundImage="Layout2"/>
+                                                <state key="selected" image="s" backgroundImage="Layout2"/>
+                                                <connections>
+                                                    <action selector="didPressedChangeLayoutButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="hvs-6n-0gb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBs-qq-OPX" userLabel="Button3">
+                                                <rect key="frame" x="242.66666666666671" y="0.0" width="91.333333333333343" height="91.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TBs-qq-OPX" secondAttribute="height" multiplier="1:1" id="wSg-Qj-jbW"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="Layout3"/>
+                                                <state key="selected" image="s" backgroundImage="Layout3"/>
+                                                <connections>
+                                                    <action selector="didPressedChangeLayoutButton:" destination="ViV-X0-GtF" eventType="touchUpInside" id="yus-ue-Ukb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                        <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
                                     </stackView>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <variation key="heightClass=compact-widthClass=regular" distribution="fillProportionally"/>
+                                <variation key="heightClass=regular-widthClass=compact" distribution="equalSpacing"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PK2-bP-KMo"/>
@@ -250,9 +269,9 @@
                         <outletCollection property="imagePickerButtons" destination="z3j-sj-WaE" collectionClass="NSMutableArray" id="vAp-XT-eu3"/>
                         <outletCollection property="imagePickerButtons" destination="0bJ-qs-FPz" collectionClass="NSMutableArray" id="z5p-Ju-u6N"/>
                         <outletCollection property="imagePickerButtons" destination="ryf-aC-nQn" collectionClass="NSMutableArray" id="QjF-hD-A0m"/>
-                        <outletCollection property="changeDisplayLayoutButtons" destination="Rrt-6S-p83" collectionClass="NSMutableArray" id="WGo-fN-BsQ"/>
-                        <outletCollection property="changeDisplayLayoutButtons" destination="jjh-O5-IUJ" collectionClass="NSMutableArray" id="DSV-ud-po4"/>
                         <outletCollection property="changeDisplayLayoutButtons" destination="TBs-qq-OPX" collectionClass="NSMutableArray" id="su3-P3-oUl"/>
+                        <outletCollection property="changeDisplayLayoutButtons" destination="jjh-O5-IUJ" collectionClass="NSMutableArray" id="DSV-ud-po4"/>
+                        <outletCollection property="changeDisplayLayoutButtons" destination="Rrt-6S-p83" collectionClass="NSMutableArray" id="WGo-fN-BsQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltp-3b-dkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,12 +285,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ArrowLeft" width="3.5" height="4.5"/>
-        <image name="ArrowUp" width="4.5" height="3.5"/>
-        <image name="Layout1" width="27" height="27"/>
-        <image name="Layout2" width="27" height="27"/>
-        <image name="Layout3" width="27" height="27"/>
-        <image name="Plus" width="13.5" height="13.5"/>
-        <image name="s" width="27" height="27"/>
+        <image name="ArrowLeft" width="3.3333332538604736" height="4.6666665077209473"/>
+        <image name="ArrowUp" width="4.6666665077209473" height="3.3333332538604736"/>
+        <image name="Layout1" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout2" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout3" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Plus" width="13.333333015441895" height="13.333333015441895"/>
+        <image name="s" width="26.666666030883789" height="26.666666030883789"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

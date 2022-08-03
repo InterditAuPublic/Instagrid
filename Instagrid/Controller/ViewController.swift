@@ -11,12 +11,10 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
     @IBOutlet var changeDisplayLayoutButtons: [UIButton]!   /// Array of 3 buttons
     @IBOutlet weak var swipeStackView: UIStackView!         /// Swipe gesture for sharing layoutView
     
-    
     // MARK: - Properties
     private let layoutDisplayStyle: [LayoutStyle] = [.layout1, .layout2, .layout3]
     private var imagePickerButton: UIButton?
     private var imageSelected: UIImage?
-    
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -26,9 +24,9 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
     
     // MARK: - viewDidLoad
     private func prepareInterface() {
+        didPressedChangeLayoutButton(changeDisplayLayoutButtons[0])
         addShadowOnView()
         resetImagePickerButtons()
-        layoutView.currentStyle = layoutDisplayStyle[1]
     }
     
     /// Add shadow to the layout
@@ -46,7 +44,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
     }
    
     // MARK: Layout Buttons Actions
-    @IBAction func DidPressedChangeLayoutButton(_ sender: UIButton) {
+    @IBAction func didPressedChangeLayoutButton(_ sender: UIButton) {
         cleanLayoutButtons()
         selectedButton(button: sender)
         let tag = sender.tag
@@ -67,7 +65,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
     }
     
 //    MARK: Image Picker
-    @IBAction func DidPressImagePickerButton(_ sender: UIButton) {
+    @IBAction func didPressImagePickerButton(_ sender: UIButton) {
 
         imagePickerButton = sender
         
@@ -112,7 +110,6 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
         }
     }
 
-    
     private func choiceSourceType(messageAlert : String, sourceType : UIImagePickerController.SourceType ) -> UIAlertAction {
         let alertAction = UIAlertAction(title: messageAlert , style: .default) {(action ) in
             let imagePicker = UIImagePickerController()
@@ -122,8 +119,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
         }
         return alertAction
     }
-    
-    
+        
     /// UIImagePicker for old iOS Versions
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let imagePick = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage){
@@ -137,7 +133,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
     
     @IBAction func didSwipe(sender: UISwipeGestureRecognizer) {
         presentActvitityUI()
-        transformImageField(landScape: true)
+        shareImageField()
     }
     
     private func presentActvitityUI() {
@@ -145,28 +141,9 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
         let shareScreenVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(shareScreenVC, animated: true, completion: nil)
     }
-//
-//    private func swipe(sender : UISwipeGestureRecognizer) {
-//        /// This variable solves the problem that the system does not detect the orientation of the screen without movement beforehand
-//        let positionPortrait : Bool = UIScreen.main.bounds.height > UIScreen.main.bounds.width
-//
-//        switch sender.direction {
-//        case .left:
-//            if let oo == !positionPortrait || UIDevice.current.orientation.isLandscape {
-//                transformImageField(landScape: true)
-//                print("swipe left")
-//            }
-//        default:
-//            if positionPortrait {
-//                transformImageField(landScape: false)
-//                print("swipe up")
-//            }
-//        }
-//    }
     
     private func transformImageField(landScape : Bool) {
         let transform = landScape ? CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0) : CGAffineTransform(translationX: 0, y: -UIScreen.main.bounds.height)
-        shareImageField()
   
         UIView.animate(withDuration: 1.5) {
             self.layoutView.transform = transform
@@ -176,16 +153,6 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
                 self.layoutView.transform = .identity
             }
         }
-        
-        UIView.animate(withDuration: 1.5) {
-            self.layoutView.transform = transform
-        } completion: { _ in
-            UIView.animate(withDuration: 1.5) {
-                self.prepareInterface()
-                self.layoutView.transform = .identity
-            }
-        }
-        
     }
     
     // MARK: - Share Image
@@ -207,9 +174,10 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
             }
         }
         present(viewController, animated: true, completion: nil)
+        transformImageField(landScape: true)
     }
     
-    //This function allows create alert message
+    //This function create alert message
     private func alertUser(title : String , message : String) -> UIAlertController  {
         let alertVc = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertVc.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in

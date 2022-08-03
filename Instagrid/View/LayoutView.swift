@@ -1,10 +1,3 @@
-//
-//  Layouts.swift
-//  Instagrid
-//
-//  Created by Melvin Mac on 06/07/2022.
-//
-
 import UIKit
 
 class LayoutView: UIButton {
