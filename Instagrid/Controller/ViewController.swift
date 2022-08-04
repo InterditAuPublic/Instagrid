@@ -2,14 +2,14 @@ import Photos
 import PhotosUI
 import UIKit
 
-class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
+    @IBOutlet var swipeGesture: UISwipeGestureRecognizer!   /// Swipe gesture for sharing layoutView
     @IBOutlet weak var layoutView: LayoutView!              /// Layout View
     @IBOutlet var imagePickerButtons: [UIButton]!           /// Array of four UIButton image
     @IBOutlet var changeDisplayLayoutButtons: [UIButton]!   /// Array of 3 buttons
-    @IBOutlet weak var swipeStackView: UIStackView!         /// Swipe gesture for sharing layoutView
+    @IBOutlet weak var swipeStackView: UIStackView!
     
     // MARK: - Properties
     private let layoutDisplayStyle: [LayoutStyle] = [.layout1, .layout2, .layout3]
@@ -22,9 +22,9 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
         prepareInterface()
     }
     
-    // MARK: - viewDidLoad
+    // MARK: - PrepareInterface
     private func prepareInterface() {
-        didPressedChangeLayoutButton(changeDisplayLayoutButtons[0])
+        didPressedChangeLayoutButton(changeDisplayLayoutButtons[1])
         addShadowOnView()
         resetImagePickerButtons()
     }
@@ -66,69 +66,19 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
     
 //    MARK: Image Picker
     @IBAction func didPressImagePickerButton(_ sender: UIButton) {
-
-        imagePickerButton = sender
         
-        if #available(iOS 14, *) {
-            var config = PHPickerConfiguration(photoLibrary: .shared())
-            config.filter = PHPickerFilter.any(of: [.images])
-            let photoPickerViewController = PHPickerViewController(configuration: config)
-            photoPickerViewController.delegate = self
-            present(photoPickerViewController, animated: true)
-        } else {
-            let photoSourceRequestController = UIAlertController(title: "", message: "Choose a picture ", preferredStyle: .actionSheet)
-            let photoLibraryAlertAction = choiceSourceType(messageAlert: "Photo Library", sourceType: .camera)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-            photoSourceRequestController.addAction(photoLibraryAlertAction)
-            photoSourceRequestController.addAction(cancelAction)
-            present(photoSourceRequestController, animated: true, completion: nil)
-        }
-    }
-
-    /// PhotoPicker for iOS 14 and newer
-    @available(iOS 14, *)
-    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        picker.dismiss(animated:true) {
-            guard !results.isEmpty else {
+        imagePickerButton = sender
+        let photoPicker = PhotoPicker()
+        
+        photoPicker.displayPicker(sender) { image in
+            guard let pickerButton = self.imagePickerButton else {
                 return
             }
-            for result in results {
-                result.itemProvider.loadObject(ofClass: UIImage.self) {
-                    [weak self]
-                    object, error in
-                    DispatchQueue.main.async { [self] in
-                        guard let self = self else {
-                            return
-                        }
-                        if let image = object as? UIImage {
-                            self.imagePickerButton?.imageView?.contentMode = .scaleAspectFill
-                            self.imagePickerButton?.setImage(image, for: .normal)
-                        }
-                    }
-                }
-            }
+            pickerButton.imageView?.contentMode = .scaleAspectFill
+            pickerButton.setImage(image, for: .normal)
         }
     }
 
-    private func choiceSourceType(messageAlert : String, sourceType : UIImagePickerController.SourceType ) -> UIAlertAction {
-        let alertAction = UIAlertAction(title: messageAlert , style: .default) {(action ) in
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = sourceType
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-        return alertAction
-    }
-        
-    /// UIImagePicker for old iOS Versions
-    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let imagePick = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage){
-            imagePickerButton?.imageView?.contentMode = .scaleAspectFill
-            imagePickerButton?.setImage(imagePick, for: .normal)
-            dismiss(animated: true, completion: nil)
-        }
-    }
-    
     // MARK: Swipe Action
     
     @IBAction func didSwipe(sender: UISwipeGestureRecognizer) {
@@ -142,13 +92,13 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
         present(shareScreenVC, animated: true, completion: nil)
     }
     
-    private func transformImageField(landScape : Bool) {
-        let transform = landScape ? CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0) : CGAffineTransform(translationX: 0, y: -UIScreen.main.bounds.height)
-  
-        UIView.animate(withDuration: 1.5) {
+    private func transformImageField(landscape : Bool) {
+        let transform = landscape ? CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0) : CGAffineTransform(translationX: 0, y: -UIScreen.main.bounds.height)
+        let durationTime = Constants.Animation.duration
+        UIView.animate(withDuration: durationTime) {
             self.layoutView.transform = transform
         } completion: { _ in
-            UIView.animate(withDuration: 1.5) {
+            UIView.animate(withDuration: durationTime) {
                 self.prepareInterface()
                 self.layoutView.transform = .identity
             }
@@ -167,14 +117,19 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIImageP
         viewController.popoverPresentationController?.sourceView = self.view
         viewController.excludedActivityTypes = [.assignToContact, .addToReadingList]
         viewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
-            let alertUser = completed ? self.alertUser(title: "Sharing is a success", message: "Your action has been completed") : self.alertUser(title: "Sharing was not successful", message: "Your action failed or was canceled")
+            let alertUser = completed ? self.alertUser(title: "Sharing is a success", message: "Your action has been completed.") : self.alertUser(title: "Sharing didn't complete", message: "Your action failed or has been canceled.")
             self.present(alertUser, animated: true, completion: nil)
             if completed {
                 self.cleanLayoutButtons()
             }
         }
         present(viewController, animated: true, completion: nil)
-        transformImageField(landScape: true)
+        
+        if UIDevice.current.orientation.isLandscape {
+            transformImageField(landscape: true)
+        } else {
+            transformImageField(landscape: false)
+        }
     }
     
     //This function create alert message

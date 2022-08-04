@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51DC4B8289A81BD00430207 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51DC4B7289A81BD00430207 /* Constant.swift */; };
+		D51DC4BA289AA11B00430207 /* PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51DC4B9289AA11B00430207 /* PHPicker.swift */; };
 		D555DAE4286B2E2100ED021E /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D555DAE3286B2E2100ED021E /* ThirstySoftRegular.otf */; };
 		D555DAE6286B2E4000ED021E /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D555DAE5286B2E4000ED021E /* Delm-Medium.otf */; };
 		D56072CC2852550D00141A88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56072C92852550D00141A88 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D51DC4B7289A81BD00430207 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D51DC4B9289AA11B00430207 /* PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPicker.swift; sourceTree = "<group>"; };
 		D555DAE3286B2E2100ED021E /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		D555DAE5286B2E4000ED021E /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		D56072CA2852550D00141A88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51DC4B6289A81AB00430207 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D51DC4B7289A81BD00430207 /* Constant.swift */,
+				D51DC4B9289AA11B00430207 /* PHPicker.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		D555DAE2286B2DF700ED021E /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 				D5B61B312832CD69007C5C45 /* Controller */,
 				D5B61B2E2832CD42007C5C45 /* Model */,
 				D5B61B322832CDC8007C5C45 /* Supporting Files */,
+				D51DC4B6289A81AB00430207 /* Tools */,
 				D56072C82852550D00141A88 /* View */,
 			);
 			path = Instagrid;
@@ -312,11 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51DC4BA289AA11B00430207 /* PHPicker.swift in Sources */,
 				D5B61AC52832A905007C5C45 /* ViewController.swift in Sources */,
 				D5F0D5752875803500DBEE8A /* LayoutView.swift in Sources */,
 				D5F0D5772875809100DBEE8A /* LayoutStyle.swift in Sources */,
 				D5B61AC12832A904007C5C45 /* AppDelegate.swift in Sources */,
 				D5B61AC32832A905007C5C45 /* SceneDelegate.swift in Sources */,
+				D51DC4B8289A81BD00430207 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
