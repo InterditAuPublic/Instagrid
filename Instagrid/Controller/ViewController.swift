@@ -15,8 +15,9 @@ class ViewController: UIViewController {
     private let layoutDisplayStyle: [LayoutStyle] = [.layout1, .layout2, .layout3]
     private var imagePickerButton: UIButton?
     private var imageSelected: UIImage?
+    private let photoPicker = PhotoPicker()
     
-    // MARK: - viewDidLoad
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareInterface()
@@ -32,9 +33,9 @@ class ViewController: UIViewController {
     /// Add shadow to the layout
     private func addShadowOnView() {
         layoutView.layer.shadowColor = UIColor.black.cgColor
-        layoutView.layer.shadowOpacity = 0.5
+        layoutView.layer.shadowOpacity = Constants.Shadow.opacity
         layoutView.layer.shadowOffset = CGSize.zero
-        layoutView.layer.shadowRadius = 3
+        layoutView.layer.shadowRadius = Constants.Shadow.radius
     }
     
     private func resetImagePickerButtons() {
@@ -64,13 +65,12 @@ class ViewController: UIViewController {
         }
     }
     
-//    MARK: Image Picker
+//    MARK: Image Picker Buttons
     @IBAction func didPressImagePickerButton(_ sender: UIButton) {
         
         imagePickerButton = sender
-        let photoPicker = PhotoPicker()
         
-        photoPicker.displayPicker(sender) { image in
+        photoPicker.displayPicker(sender, presentationController: self) { image in
             guard let pickerButton = self.imagePickerButton else {
                 return
             }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D51DC4B8289A81BD00430207 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51DC4B7289A81BD00430207 /* Constant.swift */; };
-		D51DC4BA289AA11B00430207 /* PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51DC4B9289AA11B00430207 /* PHPicker.swift */; };
+		D51DC4BA289AA11B00430207 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51DC4B9289AA11B00430207 /* PhotoPicker.swift */; };
 		D555DAE4286B2E2100ED021E /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D555DAE3286B2E2100ED021E /* ThirstySoftRegular.otf */; };
 		D555DAE6286B2E4000ED021E /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D555DAE5286B2E4000ED021E /* Delm-Medium.otf */; };
 		D56072CC2852550D00141A88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56072C92852550D00141A88 /* Main.storyboard */; };
@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		D51DC4B7289A81BD00430207 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		D51DC4B9289AA11B00430207 /* PHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPicker.swift; sourceTree = "<group>"; };
+		D51DC4B9289AA11B00430207 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		D555DAE3286B2E2100ED021E /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		D555DAE5286B2E4000ED021E /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		D56072CA2852550D00141A88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				D51DC4B7289A81BD00430207 /* Constant.swift */,
-				D51DC4B9289AA11B00430207 /* PHPicker.swift */,
+				D51DC4B9289AA11B00430207 /* PhotoPicker.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -326,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D51DC4BA289AA11B00430207 /* PHPicker.swift in Sources */,
+				D51DC4BA289AA11B00430207 /* PhotoPicker.swift in Sources */,
 				D5B61AC52832A905007C5C45 /* ViewController.swift in Sources */,
 				D5F0D5752875803500DBEE8A /* LayoutView.swift in Sources */,
 				D5F0D5772875809100DBEE8A /* LayoutStyle.swift in Sources */,

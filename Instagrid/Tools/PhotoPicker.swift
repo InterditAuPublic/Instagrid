@@ -4,35 +4,38 @@ import UIKit
 
 typealias SetImageCallbackType = (_ image: UIImage) -> Void
 
-class PhotoPicker: UIViewController, PHPickerViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoPicker: NSObject, PHPickerViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var imagePickerButton: UIButton?
+    var presentationController: UIViewController?
     var setImageCallback: SetImageCallbackType?
     
     /// Set up and display Picker according to the ios Version of user
-    func displayPicker(_ sender: UIButton, callback: @escaping SetImageCallbackType) { // check escaping
+    func displayPicker(_ sender: UIButton, presentationController: UIViewController, callback: @escaping SetImageCallbackType) { // check escaping
 
         imagePickerButton = sender
         setImageCallback = callback
         
         if #available(iOS 14, *) {
+            print("Youhou!")
             var config = PHPickerConfiguration(photoLibrary: .shared())
-            config.filter = PHPickerFilter.any(of: [.images])
+            config.filter = PHPickerFilter.any(of: [.images]) // LIVEPHOTO ?
             let photoPickerViewController = PHPickerViewController(configuration: config)
             photoPickerViewController.delegate = self
-            present(photoPickerViewController, animated: true)
+            presentationController.present(photoPickerViewController, animated: true)
         } else {
+            print("Youhou?")
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary
-            present(imagePicker, animated: true, completion: nil)
+            presentationController.present(imagePicker, animated: true, completion: nil)
         }
-        
     }
     
     /// PhotoPicker for iOS 14 and newer
     @available(iOS 14, *)
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        
         picker.dismiss(animated:true) {
             guard !results.isEmpty else {
                 return
@@ -44,6 +47,7 @@ class PhotoPicker: UIViewController, PHPickerViewControllerDelegate, UIImagePick
                     object, error in
                     DispatchQueue.main.async { [self] in
                         guard let self = self, let image = object as? UIImage, let callback = self.setImageCallback else {
+                            print("Pas de live photos stp")
                             return
                         }
                         callback(image)
@@ -55,12 +59,11 @@ class PhotoPicker: UIViewController, PHPickerViewControllerDelegate, UIImagePick
     
     /// UIImagePickerController for old iOS Versions
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        dismiss(animated: true, completion: nil)
+        presentationController?.dismiss(animated: true, completion: nil)
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage, let callback = setImageCallback else {
-             dismiss(animated: true, completion: nil)
+            presentationController?.dismiss(animated: true, completion: nil)
             return
         }
         callback(image)
-        dismiss(animated: true, completion: nil)
     }
 }
