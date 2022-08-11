@@ -25,7 +25,8 @@ class ViewController: UIViewController {
     
     // MARK: - PrepareInterface
     private func prepareInterface() {
-        didPressedChangeLayoutButton(changeDisplayLayoutButtons[1])
+        selectedButton(button: changeDisplayLayoutButtons[0])
+        layoutView.currentStyle = layoutDisplayStyle[1]
         addShadowOnView()
         resetImagePickerButtons()
     }
@@ -84,6 +85,19 @@ class ViewController: UIViewController {
     @IBAction func didSwipe(sender: UISwipeGestureRecognizer) {
         presentActvitityUI()
         shareImageField()
+        
+        let positionPortrait : Bool = UIScreen.main.bounds.height > UIScreen.main.bounds.width
+        
+        switch sender.direction {
+        case .left:
+            if UIDevice.current.orientation.isLandscape || !positionPortrait{
+                transformImageField(landscape: true)
+            }
+        default:
+            if positionPortrait {
+                transformImageField(landscape: false)
+            }
+        }
     }
     
     private func presentActvitityUI() {
@@ -125,11 +139,11 @@ class ViewController: UIViewController {
         }
         present(viewController, animated: true, completion: nil)
         
-        if UIDevice.current.orientation.isLandscape {
-            transformImageField(landscape: true)
-        } else {
-            transformImageField(landscape: false)
-        }
+//        if UIDevice.current.orientation.isLandscape {
+//            transformImageField(landscape: true)
+//        } else {
+//            transformImageField(landscape: false)
+//        }
     }
     
     //This function create alert message

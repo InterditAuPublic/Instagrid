@@ -17,14 +17,12 @@ class PhotoPicker: NSObject, PHPickerViewControllerDelegate, UIImagePickerContro
         setImageCallback = callback
         
         if #available(iOS 14, *) {
-            print("Youhou!")
             var config = PHPickerConfiguration(photoLibrary: .shared())
             config.filter = PHPickerFilter.any(of: [.images]) // LIVEPHOTO ?
             let photoPickerViewController = PHPickerViewController(configuration: config)
             photoPickerViewController.delegate = self
             presentationController.present(photoPickerViewController, animated: true)
         } else {
-            print("Youhou?")
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary
@@ -47,7 +45,6 @@ class PhotoPicker: NSObject, PHPickerViewControllerDelegate, UIImagePickerContro
                     object, error in
                     DispatchQueue.main.async { [self] in
                         guard let self = self, let image = object as? UIImage, let callback = self.setImageCallback else {
-                            print("Pas de live photos stp")
                             return
                         }
                         callback(image)
