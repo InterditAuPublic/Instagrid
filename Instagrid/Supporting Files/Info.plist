@@ -2,10 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
-	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>Please allow acces for pick a photo</string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string>Please allow acces to the photo library</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Delm-Medium.otf</string>

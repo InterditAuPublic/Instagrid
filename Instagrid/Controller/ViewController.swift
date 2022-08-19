@@ -6,10 +6,13 @@ class ViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet var swipeGesture: UISwipeGestureRecognizer!   /// Swipe gesture for sharing layoutView
-    @IBOutlet weak var layoutView: LayoutView!              /// Layout View
+    @IBOutlet weak var layoutView: LayoutView! /// Layout View
     @IBOutlet var imagePickerButtons: [UIButton]!           /// Array of four UIButton image
     @IBOutlet var changeDisplayLayoutButtons: [UIButton]!   /// Array of 3 buttons
     @IBOutlet weak var swipeStackView: UIStackView!
+    @IBOutlet weak var swipeArrowView: UIImageView!
+    @IBOutlet weak var swipeLabel: UILabel!
+    @IBOutlet weak var applicationTitle: UILabel!
     
     // MARK: - Properties
     private let layoutDisplayStyle: [LayoutStyle] = [.layout1, .layout2, .layout3]
@@ -25,10 +28,40 @@ class ViewController: UIViewController {
     
     // MARK: - PrepareInterface
     private func prepareInterface() {
+        prepareLabels()
+        prepareSwipeGesture()
         selectedButton(button: changeDisplayLayoutButtons[0])
         layoutView.currentStyle = layoutDisplayStyle[1]
         addShadowOnView()
         resetImagePickerButtons()
+    }
+    
+    private func prepareLabels() {
+//        guard let delmMedium = UIFont(name: "Delm-Medium", size: 22) else {
+//            print("Unable to load \"Delm-Medium\" font.")
+//
+//        }
+        guard let thirstySoftRegular = UIFont(name: "ThirstySoftRegular", size: 28) else {
+            print("Unable to load \"ThirstySoftRegular\" font.")
+            return
+        }
+                       
+        applicationTitle.text = "Instagrid"
+        applicationTitle.font = UIFontMetrics.default.scaledFont(for: thirstySoftRegular)
+        
+        swipeLabel.font = UIFontMetrics.default.scaledFont(for: thirstySoftRegular)
+        swipeLabel.adjustsFontForContentSizeCategory = true
+    }
+    
+    private func prepareSwipeGesture() {
+        let swipeUp = UISwipeGestureRecognizer()
+        swipeUp.direction = .up
+        let swipeLeft = UISwipeGestureRecognizer()
+        swipeLeft.direction = .left
+        layoutView.addGestureRecognizer(swipeUp)
+        layoutView.addGestureRecognizer(swipeLeft)
+        swipeUp.addTarget(self, action: #selector(didSwipe))
+        swipeLeft.addTarget(self, action: #selector(didSwipe))
     }
     
     /// Add shadow to the layout
@@ -41,7 +74,7 @@ class ViewController: UIViewController {
     
     private func resetImagePickerButtons() {
         for button in imagePickerButtons {
-            button.setImage(#imageLiteral(resourceName: "Plus"), for: .normal)
+            button.setImage(#imageLiteral(resourceName: "Plus-1"), for: .normal)
         }
     }
    
@@ -82,37 +115,33 @@ class ViewController: UIViewController {
 
     // MARK: Swipe Action
     
-    @IBAction func didSwipe(sender: UISwipeGestureRecognizer) {
-        presentActvitityUI()
-        shareImageField()
-        
+    @objc private func didSwipe(sender: UISwipeGestureRecognizer) {
         let positionPortrait : Bool = UIScreen.main.bounds.height > UIScreen.main.bounds.width
         
         switch sender.direction {
         case .left:
             if UIDevice.current.orientation.isLandscape || !positionPortrait{
+                print(sender.direction)
                 transformImageField(landscape: true)
             }
         default:
             if positionPortrait {
+                print(sender.direction)
                 transformImageField(landscape: false)
             }
         }
     }
-    
-    private func presentActvitityUI() {
-        guard let image = UIImage(systemName: "" ) else { return }
-        let shareScreenVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        present(shareScreenVC, animated: true, completion: nil)
-    }
-    
+
     private func transformImageField(landscape : Bool) {
         let transform = landscape ? CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0) : CGAffineTransform(translationX: 0, y: -UIScreen.main.bounds.height)
         let durationTime = Constants.Animation.duration
+        
         UIView.animate(withDuration: durationTime) {
             self.layoutView.transform = transform
+            self.shareImageField()
         } completion: { _ in
             UIView.animate(withDuration: durationTime) {
+                self.cleanLayoutButtons()
                 self.prepareInterface()
                 self.layoutView.transform = .identity
             }
@@ -134,16 +163,10 @@ class ViewController: UIViewController {
             let alertUser = completed ? self.alertUser(title: "Sharing is a success", message: "Your action has been completed.") : self.alertUser(title: "Sharing didn't complete", message: "Your action failed or has been canceled.")
             self.present(alertUser, animated: true, completion: nil)
             if completed {
-                self.cleanLayoutButtons()
+                print("fini")
             }
         }
         present(viewController, animated: true, completion: nil)
-        
-//        if UIDevice.current.orientation.isLandscape {
-//            transformImageField(landscape: true)
-//        } else {
-//            transformImageField(landscape: false)
-//        }
     }
     
     //This function create alert message
