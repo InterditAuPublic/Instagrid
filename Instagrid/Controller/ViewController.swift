@@ -5,7 +5,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet var swipeGesture: UISwipeGestureRecognizer!   /// Swipe gesture for sharing layoutView
+
     @IBOutlet weak var layoutView: LayoutView! /// Layout View
     @IBOutlet var imagePickerButtons: [UIButton]!           /// Array of four UIButton image
     @IBOutlet var changeDisplayLayoutButtons: [UIButton]!   /// Array of 3 buttons
@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var swipeArrowView: UIImageView!
     @IBOutlet weak var swipeLabel: UILabel!
     @IBOutlet weak var applicationTitle: UILabel!
+    @IBOutlet weak var layoutRatioConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     private let layoutDisplayStyle: [LayoutStyle] = [.layout1, .layout2, .layout3]
@@ -71,6 +72,15 @@ class ViewController: UIViewController {
         layoutView.layer.shadowOpacity = Constants.Shadow.opacity
         layoutView.layer.shadowOffset = CGSize.zero
         layoutView.layer.shadowRadius = Constants.Shadow.radius
+    }
+    
+    ///
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        coordinator.animate(alongsideTransition: nil) { _ in
+            return
+        }
     }
     
     private func resetImagePickerButtons() {
