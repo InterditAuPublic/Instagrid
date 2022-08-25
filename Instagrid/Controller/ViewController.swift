@@ -37,10 +37,11 @@ class ViewController: UIViewController {
     }
     
     private func prepareLabels() {
-//        guard let delmMedium = UIFont(name: "Delm-Medium", size: 22) else {
-//            print("Unable to load \"Delm-Medium\" font.")
-//
-//        }
+        guard let delmMedium = UIFont(name: "Delm-Medium", size: 22) else {
+            print("Unable to load \"Delm-Medium\" font.")
+            return
+
+        }
         guard let thirstySoftRegular = UIFont(name: "ThirstySoftRegular", size: 28) else {
             print("Unable to load \"ThirstySoftRegular\" font.")
             return
@@ -49,7 +50,7 @@ class ViewController: UIViewController {
         applicationTitle.text = "Instagrid"
         applicationTitle.font = UIFontMetrics.default.scaledFont(for: thirstySoftRegular)
         
-        swipeLabel.font = UIFontMetrics.default.scaledFont(for: thirstySoftRegular)
+        swipeLabel.font = UIFontMetrics.default.scaledFont(for: delmMedium)
         swipeLabel.adjustsFontForContentSizeCategory = true
     }
     
