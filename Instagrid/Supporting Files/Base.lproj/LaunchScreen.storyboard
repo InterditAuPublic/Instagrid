@@ -7,33 +7,26 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="ThirstySoftRegular.otf">
-            <string>ThirstySoftRegular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdW-Yx-BnV">
-                                <rect key="frame" x="92.333333333333329" y="388" width="205.33333333333337" height="68"/>
-                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="52"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
+                            <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="s6f-t9-2W8">
+                                <rect key="frame" x="75" y="358" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71362143749999996" green="0.84266054629999998" blue="0.89726132150000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qdW-Yx-BnV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Idi-bX-7ka"/>
-                            <constraint firstItem="qdW-Yx-BnV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZC3-tq-RsE"/>
+                            <constraint firstItem="s6f-t9-2W8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="DW4-iI-cUz"/>
+                            <constraint firstItem="s6f-t9-2W8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="314" id="Hhq-8T-5uI"/>
+                            <constraint firstItem="s6f-t9-2W8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fxN-tv-Odm"/>
+                            <constraint firstItem="s6f-t9-2W8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hpu-Zw-ba5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -42,4 +35,7 @@
             <point key="canvasLocation" x="52.307692307692307" y="374.64454976303318"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchImage" width="41.333332061767578" height="13"/>
+    </resources>
 </document>

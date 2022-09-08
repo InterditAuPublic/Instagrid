@@ -76,21 +76,17 @@ class ViewController: UIViewController {
     
     ///
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        
         super.viewWillTransition(to: size, with: coordinator)
         
-        coordinator.animate(alongsideTransition: nil) { _ in
-            self.layoutRatioConstraint.priority = .defaultHigh
-            UIView.animate(withDuration:0.15) {
-                self.layoutView.alpha = 0
-            }
+        self.layoutRatioConstraint.priority = .defaultHigh
+        UIView.animate(withDuration:0.15) {
+            self.layoutView.alpha = 0
         }
         coordinator.animate(alongsideTransition: nil) { _ in
             self.layoutRatioConstraint.priority = .required
             UIView.animate(withDuration:0.15) {
                 self.layoutView.alpha = 1
             }
-            return
         }
     }
     
