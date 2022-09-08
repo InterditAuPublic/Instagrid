@@ -184,7 +184,9 @@ class ViewController: UIViewController {
                 print("fini")
             }
         }
-        present(viewController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
     
     //This function create alert message
