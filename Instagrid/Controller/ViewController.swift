@@ -6,7 +6,7 @@ class ViewController: UIViewController {
     
     // MARK: - Outlets
 
-    @IBOutlet weak var layoutView: LayoutView! /// Layout View
+    @IBOutlet weak var layoutView: LayoutView!              /// Layout View
     @IBOutlet var imagePickerButtons: [UIButton]!           /// Array of four UIButton image
     @IBOutlet var changeDisplayLayoutButtons: [UIButton]!   /// Array of 3 buttons
     @IBOutlet weak var swipeStackView: UIStackView!
@@ -37,13 +37,14 @@ class ViewController: UIViewController {
         resetImagePickerButtons()
     }
     
+    ///Prepare Labels style
     private func prepareLabels() {
         guard let delmMedium = UIFont(name: "Delm-Medium", size: 22) else {
             print("Unable to load \"Delm-Medium\" font.")
             return
 
         }
-        guard let thirstySoftRegular = UIFont(name: "ThirstySoftRegular", size: 28) else {
+        guard let thirstySoftRegular = UIFont(name: "ThirstySoftRegular", size: 30) else {
             print("Unable to load \"ThirstySoftRegular\" font.")
             return
         }
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
         swipeLabel.adjustsFontForContentSizeCategory = true
     }
     
+    //Add Swipe Gesture to view
     private func prepareSwipeGesture() {
         let swipeUp = UISwipeGestureRecognizer()
         swipeUp.direction = .up
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
         swipeLeft.addTarget(self, action: #selector(didSwipe))
     }
     
-    /// Add shadow to the layout
+    //Add shadow to the layout
     private func addShadowOnView() {
         layoutView.layer.shadowColor = UIColor.black.cgColor
         layoutView.layer.shadowOpacity = Constants.Shadow.opacity
@@ -74,7 +76,7 @@ class ViewController: UIViewController {
         layoutView.layer.shadowRadius = Constants.Shadow.radius
     }
     
-    ///
+    //ByPass StackView errors
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
@@ -90,6 +92,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Reset Image Picker Buttons
     private func resetImagePickerButtons() {
         for button in imagePickerButtons {
             button.setImage(#imageLiteral(resourceName: "Plus-1"), for: .normal)
@@ -132,7 +135,6 @@ class ViewController: UIViewController {
     }
 
     // MARK: Swipe Action
-    
     @objc private func didSwipe(sender: UISwipeGestureRecognizer) {
         let positionPortrait : Bool = UIScreen.main.bounds.height > UIScreen.main.bounds.width
         
@@ -150,6 +152,7 @@ class ViewController: UIViewController {
         }
     }
 
+    //Layout disapearance animation
     private func transformImageField(landscape : Bool) {
         let transform = landscape ? CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0) : CGAffineTransform(translationX: 0, y: -UIScreen.main.bounds.height)
         let durationTime = Constants.Animation.duration

@@ -1,7 +1,7 @@
 import UIKit
 
 class LayoutView: UIButton {
-    // Layout depend of the isHidden property of 2 images
+    // Layout change according to the picker buttons display state
     
     @IBOutlet weak var TopRightButtonPicker: UIButton!
     @IBOutlet weak var BottomRightButtonPicker: UIButton!

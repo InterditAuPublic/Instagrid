@@ -11,14 +11,14 @@ class PhotoPicker: NSObject, PHPickerViewControllerDelegate, UIImagePickerContro
     var setImageCallback: SetImageCallbackType?
     
     /// Set up and display Picker according to the ios Version of user
-    func displayPicker(_ sender: UIButton, presentationController: UIViewController, callback: @escaping SetImageCallbackType) { // check escaping
+    func displayPicker(_ sender: UIButton, presentationController: UIViewController, callback: @escaping SetImageCallbackType) {
 
         imagePickerButton = sender
         setImageCallback = callback
         
         if #available(iOS 14, *) {
             var config = PHPickerConfiguration(photoLibrary: .shared())
-            config.filter = PHPickerFilter.any(of: [.images]) // LIVEPHOTO ?
+            config.filter = PHPickerFilter.any(of: [.images])
             let photoPickerViewController = PHPickerViewController(configuration: config)
             photoPickerViewController.delegate = self
             presentationController.present(photoPickerViewController, animated: true)
@@ -30,7 +30,7 @@ class PhotoPicker: NSObject, PHPickerViewControllerDelegate, UIImagePickerContro
         }
     }
     
-    /// PhotoPicker for iOS 14 and newer
+    /// PhotoPicker for iOS 14 and after
     @available(iOS 14, *)
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         
@@ -39,7 +39,7 @@ class PhotoPicker: NSObject, PHPickerViewControllerDelegate, UIImagePickerContro
                 return
             }
             
-            for result in results { // replace by map or foreach
+            for result in results {
                 result.itemProvider.loadObject(ofClass: UIImage.self) {
                     [weak self]
                     object, error in
@@ -54,7 +54,7 @@ class PhotoPicker: NSObject, PHPickerViewControllerDelegate, UIImagePickerContro
         }
     }
     
-    /// UIImagePickerController for old iOS Versions
+    /// UIImagePickerController for old iOS Versions (Before iOS 14)
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         presentationController?.dismiss(animated: true, completion: nil)
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage, let callback = setImageCallback else {
